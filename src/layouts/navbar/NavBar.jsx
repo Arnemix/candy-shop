@@ -7,8 +7,8 @@ import { IoIceCream } from "react-icons/io5";
 import { GiChocolateBar } from "react-icons/gi";
 import { GiChipsBag } from "react-icons/gi";
 import { useSelector } from "react-redux";
-import SignInModal from '../../components/SignIn/SIgnIn';
-import SignUpModal from '../../components/SignUp/SignUp';
+import SignInModal from "../../components/SignIn/SIgnIn";
+import SignUpModal from "../../components/SignUp/SignUp";
 
 function NavBar(props) {
     const product = useSelector((state) => state.productsReducers);
@@ -28,8 +28,6 @@ function NavBar(props) {
         setShowSignUpModal(true);
     };
 
-    
-
     return (
         <div className="navbar">
             <Link to="/">
@@ -43,18 +41,18 @@ function NavBar(props) {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/chocolats">
-                            Chocolat <GiChocolateBar />
+                        <Link to="/chocolates">
+                            Chocolates <GiChocolateBar />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/bonbons">
-                            Bonbons <FaCandyCane />
+                        <Link to="/candies">
+                            Candies <FaCandyCane />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/glaces">
-                            Glaces <IoIceCream />
+                        <Link to="/ice-cream">
+                            Ice Cream <IoIceCream />
                         </Link>
                     </li>
                 </ul>
@@ -68,7 +66,6 @@ function NavBar(props) {
                     {showSignUpModal && <SignUpModal onClose={() => setShowSignUpModal(false)} />}
                 </div>
             </div>
-
         </div>
     );
 }

@@ -6,7 +6,7 @@
             "quantity": 15,
             "price": 2,
             "pictureName": "candy1.png",
-            "category": "bonbons"
+            "category": "candy"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "quantity": 20,
             "price": 2,
             "pictureName": "candy2.png",
-            "category": "bonbons"
+            "category": "candy"
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "candy3.png",
-            "category": "bonbons"
+            "category": "candy"
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "candy4.png",
-            "category": "bonbons"
+            "category": "candy"
         },
         {
             "id": 5,
@@ -70,7 +70,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate1.png",
-            "category": "chocolats"
+            "category": "chocolate"
         },
         {
             "id": 10,
@@ -78,7 +78,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate2.png",
-            "category": "chocolats"
+            "category": "chocolate"
         },
         {
             "id": 11,
@@ -86,7 +86,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate3.png",
-            "category": "chocolats"
+            "category": "chocolate"
         },
         {
             "id": 12,
@@ -94,7 +94,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate4.png",
-            "category": "chocolats"
+            "category": "chocolate"
         },
         {
             "id": 13,
@@ -102,7 +102,7 @@
             "quantity": 10,
             "price": 2,
             "pictureName": "ice_cream1.png",
-            "category": "glaces"
+            "category": "ice_cream"
         },
         {
             "id": 14,
@@ -110,7 +110,7 @@
             "quantity": 10,
             "price": 1,
             "pictureName": "ice_cream2.png",
-            "category": "glaces"
+            "category": "ice_cream"
         },
         {
             "id": 15,
@@ -118,7 +118,7 @@
             "quantity": 10,
             "price": 1,
             "pictureName": "ice_cream3.png",
-            "category": "glaces"
+            "category": "ice_cream"
         },
         {
             "id": 16,
@@ -126,7 +126,7 @@
             "quantity": 10,
             "price": 1,
             "pictureName": "ice_cream4.png",
-            "category": "glaces"
+            "category": "ice_cream"
         }
     ]
 }
