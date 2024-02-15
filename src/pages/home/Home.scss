@@ -49,6 +49,21 @@
             border: none;
             color: white;
             background-color: rgb(205, 205, 205);
+            margin: 10px;
+            &:hover {
+                background-color: rgb(170, 170, 170);
+                transition: 0.3s ease;
+                transform: scale(1.1);
+            }
         }
     }
+}
+
+.product-old-price {
+    text-decoration: line-through;
+}
+
+.product-new-price {
+    color: red;
+    font-size: x-large;
 }
