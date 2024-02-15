@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Home.scss";
 import { useSelector } from "react-redux";
+import "./Home.scss";
 
 function Home(props) {
     const [products, setProducts] = useState(useSelector((state) => state.productsReducers.products));
@@ -10,13 +10,17 @@ function Home(props) {
     //Permet de recupérer 5 produits au hasard
     useEffect(() => {
         setProductsCopy(products);
-        console.log(productsCopy);
-        for (let i = 0; i < 5; i++) {
-            const random = Math.floor(Math.random() * productsCopy.length);
-            setCarouselProducts([...carouselProducts, productsCopy[random]]);
-        }
+        setCarouselProducts((prevCarouselProducts) => {
+            let updatedCarouselProducts = [...prevCarouselProducts];
+            for (let i = 0; i < 5; i++) {
+                console.log("Execute");
+                const random = Math.floor(Math.random() * productsCopy.length);
+                updatedCarouselProducts.push(productsCopy[random]);
+                setProductsCopy(productsCopy.filter((product) => product.id !== productsCopy[random].id));
+            }
+            return updatedCarouselProducts;
+        });
         setLoading(false);
-        console.log(carouselProducts);
     }, [products]);
 
     if (loading) return <p>Loading...</p>;
@@ -24,12 +28,16 @@ function Home(props) {
     return (
         <div className="home-container">
             <div className="home-title">
-                <h1>Discover our awesome products !</h1>
+                <h1>Discover our awesome products ! ({carouselProducts.length})</h1>
             </div>
             <div className="carousel">
                 <div className="carousel-content">
-                    {/* <h1>{carouselProducts[0].name}</h1> */}
-                    {/* <img src="" alt={carouselProducts[0].name} /> */}
+                    {carouselProducts.map((product) => (
+                        <div key={product.id} className="carousel-product">
+                            <h1>{product.name}</h1>
+                            <img src={process.env.PUBLIC_URL + `/assets/${product.pictureName}`} alt={product.name} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
