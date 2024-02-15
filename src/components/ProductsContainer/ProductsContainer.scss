@@ -1,0 +1,20 @@
+// Votre contenu SCSS initial ici
+.products-container {
+    margin-bottom: 40px;
+    .products {
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        justify-content: center;
+        gap: 10px;
+        .product-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            .card-image {
+                height: 60%;
+                img {
+                    max-width: 90%;
+                    max-height: 90%;
+                }
+            }
+        }
+    }
+}

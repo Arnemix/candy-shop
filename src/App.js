@@ -2,6 +2,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.scss";
 import NavBar from "./layouts/navbar/NavBar";
 import Home from "./pages/home/Home";
+import ProductsContainer from "./components/ProductsContainer/ProductsContainer";
 
 const AppLayout = () => {
     return (
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/chips",
-                element: <div>Chips</div>,
+                element: <ProductsContainer productsCategory="chips" />,
             },
             {
                 path: "/chocolates",
