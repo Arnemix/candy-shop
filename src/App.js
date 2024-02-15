@@ -49,6 +49,7 @@ const router = createBrowserRouter([
                 path: "/glaces",
                 element: <div>Glaces</div>,
             },
+            
         ],
     },
 ]);

@@ -42,5 +42,22 @@
             font-weight: bold;
             padding-left: 10px;
         }
+        button {
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #FF1493;
+            }
+        }
     }
 }
