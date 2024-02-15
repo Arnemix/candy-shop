@@ -7,7 +7,10 @@ function SignUpModal({ onClose }) {
     return (
         <div className="modal">
             <form className="form">
-                <p className="title">Register </p>
+                <div className="header">
+                    <p className="title">Register </p>
+                    <button onClick={onClose}>✖</button>
+                </div>
                 <p className="message">Signup now and get full access to our shop. </p>
                 <div className="flex">
                     <label>
@@ -19,12 +22,12 @@ function SignUpModal({ onClose }) {
                         <input required placeholder="" type="text" className="input" />
                         <span>Lastname</span>
                     </label>
-                </div>  
+                </div>
 
                 <label>
                     <input required placeholder="" type="email" className="input" />
                     <span>Email</span>
-                </label> 
+                </label>
 
                 <label>
                     <input required placeholder="" type="password" className="input" />
@@ -36,7 +39,7 @@ function SignUpModal({ onClose }) {
                 </label>
                 <button className="submit">Submit</button>
             </form>
-            <button onClick={onClose}>Close</button>
+
         </div>
     );
 }
