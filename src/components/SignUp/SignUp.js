@@ -1,12 +1,14 @@
 import React from 'react';
 import './SignUp.css';
+import { Link } from 'react-router-dom';
+
 
 function SignUpModal({ onClose }) {
     return (
         <div className="modal">
             <form className="form">
                 <p className="title">Register </p>
-                <p className="message">Signup now and get full access to our app. </p>
+                <p className="message">Signup now and get full access to our shop. </p>
                 <div className="flex">
                     <label>
                         <input required placeholder="" type="text" className="input" />
@@ -33,7 +35,6 @@ function SignUpModal({ onClose }) {
                     <span>Confirm password</span>
                 </label>
                 <button className="submit">Submit</button>
-                <p className="signin">Already have an account ? <a href="#">Signin</a> </p>
             </form>
             <button onClick={onClose}>Close</button>
         </div>
