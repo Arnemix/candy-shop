@@ -1,5 +1,5 @@
-import "./App.scss";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.scss";
 import NavBar from "./layouts/navbar/NavBar";
 import Home from "./pages/home/Home";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
@@ -54,10 +54,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-    const dispatch = useDispatch();
-    const products = useSelector((state) => state.products);
-    // useEffect(() => {
-    //     dispatch(setProducts(database.products));
-    // }, []);
     return <RouterProvider router={router} />;
 }
