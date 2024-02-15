@@ -4,6 +4,7 @@ import NavBar from "./layouts/navbar/NavBar";
 import Home from "./pages/home/Home";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import ProductCard from "./components/ProductCard/ProductCard";
+
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import database from "./data/database.json";
