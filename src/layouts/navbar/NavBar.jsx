@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
-import Logo from "../../assets/logo.png";
 import { FaCandyCane } from "react-icons/fa";
 import { IoIceCream } from "react-icons/io5";
 import { GiChocolateBar } from "react-icons/gi";
@@ -31,7 +30,7 @@ function NavBar(props) {
     return (
         <div className="navbar">
             <Link to="/">
-                <img src={Logo} alt="Candy shop logo" />
+                <img src={process.env.PUBLIC_URL + "/assets/logo.png"} alt="Candy shop logo" />
             </Link>
             <nav>
                 <ul>

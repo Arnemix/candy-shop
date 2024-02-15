@@ -56,8 +56,8 @@ const router = createBrowserRouter([
 export default function App() {
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
-    useEffect(() => {
-        dispatch(setProducts(database.products));
-    }, []);
+    // useEffect(() => {
+    //     dispatch(setProducts(database.products));
+    // }, []);
     return <RouterProvider router={router} />;
 }
