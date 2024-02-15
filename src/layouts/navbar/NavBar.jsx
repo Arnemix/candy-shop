@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
 import Logo from "../../assets/logo.png";
@@ -6,8 +6,14 @@ import { FaCandyCane } from "react-icons/fa";
 import { IoIceCream } from "react-icons/io5";
 import { GiChocolateBar } from "react-icons/gi";
 import { GiChipsBag } from "react-icons/gi";
+import { useSelector } from "react-redux";
 
 function NavBar(props) {
+    const product = useSelector((state) => state.productsReducers);
+
+    useEffect(() => {
+        // console.log(product);
+    }, [product]);
     return (
         <div className="navbar">
             <Link to="/">
@@ -16,7 +22,7 @@ function NavBar(props) {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/home">
+                        <Link to="/chips">
                             Chips <GiChipsBag />
                         </Link>
                     </li>
@@ -31,7 +37,7 @@ function NavBar(props) {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/candies">
+                        <Link to="/glaces">
                             Glaces <IoIceCream />
                         </Link>
                     </li>
