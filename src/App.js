@@ -1,10 +1,13 @@
-import './App.scss';
-import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import "./App.scss";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import NavBar from "./layouts/navbar/NavBar";
+import Home from "./pages/home/Home";
 
 const AppLayout = () => {
     return (
         <div>
             {/* //Ajouter un layout ici (navbar etc.) */}
+            <NavBar />
             <Outlet />
         </div>
     );
@@ -12,7 +15,7 @@ const AppLayout = () => {
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: "/",
         element: (
             <AppLayout>
                 <Outlet />
@@ -23,6 +26,8 @@ const router = createBrowserRouter([
                 // Code d'exemple
                 // path: '/',
                 // element: <div>Home</div>,
+                path: "/home",
+                element: <Home />,
             },
         ],
     },
