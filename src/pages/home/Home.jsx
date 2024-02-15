@@ -43,6 +43,9 @@ function Home(props) {
                     {carouselProducts.map((product, index) => (
                         <div key={index} className={index === currentIndex ? "carousel-product active" : "carousel-product"}>
                             <h1>{product.name}</h1>
+                            <h3>
+                                Promotion : <span className="product-old-price">{product.price * 2}$</span> <span className="product-new-price">-50% {product.price}$</span>
+                            </h3>
                             <img src={process.env.PUBLIC_URL + `/assets/${product.pictureName}`} alt={product.name} />
                         </div>
                     ))}
