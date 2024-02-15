@@ -1,0 +1,132 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Haribo Dragibus",
+            "quantity": 15,
+            "price": 2,
+            "pictureName": "candy1.png",
+            "category": "bonbons"
+        },
+        {
+            "id": 2,
+            "name": "Haribo Rotella",
+            "quantity": 20,
+            "price": 2,
+            "pictureName": "candy2.png",
+            "category": "bonbons"
+        },
+        {
+            "id": 3,
+            "name": "Haribo Miami P!K",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "candy3.png",
+            "category": "bonbons"
+        },
+        {
+            "id": 4,
+            "name": "Haribo Tagada P!K",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "candy4.png",
+            "category": "bonbons"
+        },
+        {
+            "id": 5,
+            "name": "Crocky Bicky",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chips1.png",
+            "category": "chips"
+        },
+        {
+            "id": 6,
+            "name": "Lays Bolognese Flavour",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chips2.png",
+            "category": "chips"
+        },
+        {
+            "id": 7,
+            "name": "Lays Nature",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chips3.png",
+            "category": "chips"
+        },
+        {
+            "id": 8,
+            "name": "Lays Spicy Paprika Flavoured",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chips4.png",
+            "category": "chips"
+        },
+        {
+            "id": 9,
+            "name": "Mars",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chocolate1.png",
+            "category": "chocolats"
+        },
+        {
+            "id": 10,
+            "name": "Snickers",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chocolate2.png",
+            "category": "chocolats"
+        },
+        {
+            "id": 11,
+            "name": "Twix",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chocolate3.png",
+            "category": "chocolats"
+        },
+        {
+            "id": 12,
+            "name": "Kinder Bueno White",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "chocolate4.png",
+            "category": "chocolats"
+        },
+        {
+            "id": 13,
+            "name": "Magnum Almond",
+            "quantity": 10,
+            "price": 2,
+            "pictureName": "ice_cream1.png",
+            "category": "glaces"
+        },
+        {
+            "id": 14,
+            "name": "Calippo Cola",
+            "quantity": 10,
+            "price": 1,
+            "pictureName": "ice_cream2.png",
+            "category": "glaces"
+        },
+        {
+            "id": 15,
+            "name": "Cornetto Chocolate",
+            "quantity": 10,
+            "price": 1,
+            "pictureName": "ice_cream3.png",
+            "category": "glaces"
+        },
+        {
+            "id": 16,
+            "name": "Magnum Classic",
+            "quantity": 10,
+            "price": 1,
+            "pictureName": "ice_cream4.png",
+            "category": "glaces"
+        }
+    ]
+}
