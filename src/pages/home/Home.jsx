@@ -1,21 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import { useSelector } from "react-redux";
 
 function Home(props) {
-    const products = useSelector((state) => state.productsReducers.products);
-    const productsCopy = [...products];
-    const carouselProducts = [];
-    let loading = true;
+    const [products, setProducts] = useState(useSelector((state) => state.productsReducers.products));
+    const [productsCopy, setProductsCopy] = useState(products);
+    const [carouselProducts, setCarouselProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
     //Permet de recupérer 5 produits au hasard
     useEffect(() => {
-        if (products.length === 0) return;
+        setProductsCopy(products);
+        console.log(productsCopy);
         for (let i = 0; i < 5; i++) {
             const random = Math.floor(Math.random() * productsCopy.length);
-            carouselProducts.push(productsCopy[random]);
-            productsCopy.splice(random, 1);
+            setCarouselProducts([...carouselProducts, productsCopy[random]]);
         }
-        loading = false;
+        setLoading(false);
         console.log(carouselProducts);
     }, [products]);
 
@@ -28,7 +28,8 @@ function Home(props) {
             </div>
             <div className="carousel">
                 <div className="carousel-content">
-                    <img src="" alt={carouselProducts[0].name} />
+                    {/* <h1>{carouselProducts[0].name}</h1> */}
+                    {/* <img src="" alt={carouselProducts[0].name} /> */}
                 </div>
             </div>
         </div>
