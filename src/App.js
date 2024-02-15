@@ -38,18 +38,17 @@ const router = createBrowserRouter([
                 element: <div>Chips</div>,
             },
             {
-                path: "/chocolats",
-                element: <div>Chocolats</div>,
+                path: "/chocolates",
+                element: <div>chocolates</div>,
             },
             {
-                path: "/bonbons",
-                element: <div>Bonbons</div>,
+                path: "/candies",
+                element: <div>Candies</div>,
             },
             {
-                path: "/glaces",
-                element: <div>Glaces</div>,
+                path: "/ice-cream",
+                element: <div>Ice Cream</div>,
             },
-            
         ],
     },
 ]);
