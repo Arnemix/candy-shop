@@ -3,6 +3,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+
 }
 
 .header {
@@ -107,7 +109,7 @@
   }
   
   .form label .input:focus + span,.form label .input:valid + span {
-    top: 40px;
+    top: 30px;
     font-size: 0.7em;
     font-weight: 600;
   }
