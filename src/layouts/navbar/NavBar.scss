@@ -13,13 +13,12 @@
         list-style: none;
         text-decoration: none;
         color: black;
-
+    
         img {
             // width: 100%;
-            height: 100%;
+            height: 100%; 
         }
     }
-
     ul {
         // width: 50%;
         display: flex;
@@ -120,5 +119,55 @@
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        height: auto;
+
+        ul {
+            gap: 1rem;
+        }
+
+        a {
+            img {
+                max-height: 80px; 
+            }
+        }
+
+        .search {
+            margin-left: 15%;
+            width: 100%;
+            margin-top: 1rem;
+
+            input {
+                width: 80%;
+            }
+        }
+        .buttonGroup {
+            margin-left: 30%; 
+        }
+    }
+    @media (max-width: 425px) {
+        ul {
+            li {
+                font-size: small; 
+                margin-right: 10px;
+            }
+        }
+        .buttonGroup {
+            margin-left: 20%; 
+        }
+    }
+
+    @media (max-width: 375px){
+        .buttonGroup {
+            margin-left: 15%;
+        }
+    @media (max-width: 320px){
+        .buttonGroup {
+            margin-left: 12%;
+        }
+}
+}
 }
 }
