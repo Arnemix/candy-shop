@@ -31,10 +31,6 @@ function NavBar(props) {
         setShowSignUpModal(true);
     };
 
-    const filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
     return (
         <div className="navbar">
             <Link to="/">
@@ -66,11 +62,6 @@ function NavBar(props) {
             </nav>
             <div className="search">
                 <input type="text" placeholder="dragibus, candy ..." onChange={handleSearchChange} />
-                <div className="dropdown">
-                    {filteredProducts.map((product) => (
-                        <Link to={`/product/${product.id}`}>{product.name}</Link>
-                    ))}
-                </div>
             </div>
             <div className="buttonGroup">
                 <div>
