@@ -1,39 +1,41 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const cartSlices = createSlice({
-    name: "cartReducers",
+const cartSlice = createSlice({
+    name: "cart",
     initialState: {
-        cart: [],
+        items: [],
     },
     reducers: {
-        addItemToCard: (state, action) => {
-            state.map((product) => {
-                if (product.name === action.payload.name) {
-                    product.quantity += 1;
-                    console.warn(`New item quantity : ${product.quantity}`);
-                }
-                return product;
-            });
-            state.cart.push(action.payload);
-            console.warn("Item added to cart");
+        addItemToCart(state, action) {
+            const { name } = action.payload;
+            const existingItem = state.items.find((item) => item.name === name);
+            if (existingItem) {
+                console.log("existingItem", existingItem);
+                existingItem.quantity++;
+            } else {
+                console.log("unexisting", action.payload);
+                state.items.push({ ...action.payload, quantity: 1 });
+            }
         },
-        removeItemFromCart: (state, action) => {
-            state.map((product) => {
-                if (product.name === action.payload.name) {
-                    product.quantity -= 1;
-                    console.warn(`New item quantity : ${product.quantity}`);
+        removeItemFromCart(state, action) {
+            const { name } = action.payload;
+            const existingItem = state.items.find((item) => item.name === name);
+            if (existingItem) {
+                if (existingItem.quantity === 1) {
+                    state.items = state.items.filter((item) => item.name !== name);
+                } else {
+                    existingItem.quantity--;
                 }
-                return product;
-            });
-            state.cart = state.cart.filter((product) => product.name !== action.payload.name);
-            console.warn("Item removed from cart");
+            }
         },
-        clearCart: (state) => {
-            state.cart = [];
-            console.warn("Cart is now clear");
+        clearCart(state) {
+            state.items = [];
+        },
+        getCart(state) {
+            console.log(state.items);
         },
     },
 });
 
-export const { addItemToCard, removeItemFromCart, clearCart } = cartSlices.actions;
-export default cartSlices.reducer;
+export const { addItemToCart, removeItemFromCart, clearCart, getCart } = cartSlice.actions;
+export default cartSlice.reducer;

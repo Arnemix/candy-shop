@@ -3,7 +3,8 @@ import "./App.scss";
 import NavBar from "./layouts/navbar/NavBar";
 import Home from "./pages/home/Home";
 import ProductsContainer from "./components/ProductsContainer/ProductsContainer";
-import ProductDetails from "./components/ProductsDetails/ProductsDetails"; 
+import ProductDetails from "./components/ProductsDetails/ProductsDetails";
+import Cart from "./pages/cart/Cart";
 
 const AppLayout = () => {
     return (
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path: "/product/:id",
                 element: <ProductDetails />,
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
             },
         ],
     },
