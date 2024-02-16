@@ -52,10 +52,10 @@ function Home(props) {
                 </div>
                 <div className="buttons">
                     <button className="prev" onClick={prevSlide}>
-                        Prev
+                        &#8592;
                     </button>
                     <button className="next" onClick={nextSlide}>
-                        Next
+                        &#8594;
                     </button>
                 </div>
             </div>
