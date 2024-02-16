@@ -5,17 +5,11 @@ import { FaCandyCane } from "react-icons/fa";
 import { IoIceCream } from "react-icons/io5";
 import { GiChocolateBar } from "react-icons/gi";
 import { GiChipsBag } from "react-icons/gi";
-import { useSelector } from "react-redux";
 import SignInModal from "../../components/SignIn/SIgnIn";
 import SignUpModal from "../../components/SignUp/SignUp";
 
 function NavBar(props) {
-    const product = useSelector((state) => state.productsReducers);
-
-    useEffect(() => {
-        // console.log(product);
-    }, [product]);
-
+    const [user, setUser] = useState(null);
     const [showSignInModal, setShowSignInModal] = useState(false);
     const [showSignUpModal, setShowSignUpModal] = useState(false);
 
@@ -60,13 +54,15 @@ function NavBar(props) {
                 <input type="text" placeholder="dragibus, candy ..." />
             </div>
             <div className="buttonGroup">
-                <div>
-                    <p>User : {}</p>
+                <div id="userMarge">
+                    <p>User : {user ? user.firstname : ''}</p>
                 </div>
-                <button onClick={fctSignIn}>Sign in</button>
-                {showSignInModal && <SignInModal onClose={() => setShowSignInModal(false)} />}
-                <button onClick={fctSignUp}>Sign up</button>
-                {showSignUpModal && <SignUpModal onClose={() => setShowSignUpModal(false)} />}
+                {!user && (
+                    <>
+                        <button onClick={fctSignIn}>Sign in</button>
+                        {showSignInModal && <SignInModal onClose={() => setShowSignInModal(false)} onSignIn={setUser} />}
+                    </>
+                )}
             </div>
         </div>
     );
