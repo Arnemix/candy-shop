@@ -38,11 +38,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/candies",
-                element: <div>Candies</div>,
+                element: <ProductsContainer productsCategory="candy" />,
             },
             {
                 path: "/ice-cream",
-                element: <div>Ice Cream</div>,
+                element: <ProductsContainer productsCategory="ice_cream" />,
             },
         ],
     },
