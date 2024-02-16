@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { FaRegTrashAlt } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemToCart, getCart } from "../../redux/slices/cartSlices";
-
+import "./Cart.scss";
+import { removeItemFromCart } from "../../redux/slices/cartSlices";
 function Cart(props) {
     const cart = useSelector((state) => state.cartReducers.items);
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const initialCartItems = [
-            { name: "Chocolat", price: 3.5, quantity: 1 },
-            { name: "Chocolat", price: 3.5, quantity: 1 },
-            { name: "Chips", price: 3.5, quantity: 1 },
-        ];
-
-        initialCartItems.forEach((item) => {
-            dispatch(addItemToCart(item));
-        });
-        dispatch(getCart());
         console.log(cart);
         setLoading(false);
-    }, [dispatch]);
+    }, [dispatch, cart]);
 
     if (loading) return <p>Loading...</p>;
 
@@ -28,14 +19,29 @@ function Cart(props) {
         <div className="cart-container">
             <div className="cart-title">
                 <h1>Your Cart</h1>
+                <h2>{cart.length} products</h2>
             </div>
             <div className="cart-content">
                 {cart.map((product) => (
                     <div key={product.name} className="cart-item">
-                        <div className="cart-item-title">{product.name}</div>
-                        <div className="cart-item-price">${product.price}</div>
-                        <div className="card-item-quantity">
-                            <p>Quantity: {product.quantity}</p>
+                        <div className="card-item-image">
+                            <img src={process.env.PUBLIC_URL + `/assets/${product.pictureName}`} alt={product.name} />
+                        </div>
+                        <div className="card-item-content">
+                            <div className="cart-item-title">
+                                <p>Item : {product.name}</p>
+                            </div>
+                            <div className="cart-item-price">
+                                <p>Price : ${product.price} </p>
+                            </div>
+                            <div className="card-item-quantity">
+                                <p>Quantity: {product.quantity}</p>
+                            </div>
+                        </div>
+                        <div className="card-item-button">
+                            <button onClick={() => dispatch(removeItemFromCart(product))}>
+                                <FaRegTrashAlt />
+                            </button>
                         </div>
                     </div>
                 ))}
