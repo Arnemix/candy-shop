@@ -30,20 +30,19 @@ function ProductCard({ productsCategory }) {
             </div>
             <div className="products">
                 {products.map((product) => (
-                    <Link to={`/product/${product.id}`}>
-                        <div className="product-card">
-                            <div className="card-image">
-                                <img src={process.env.PUBLIC_URL + `/assets/${product.pictureName}`} alt={product.name} />
-                            </div>
-                            <div className="card-content">
-                                <h1>{product.name}</h1>
-                                <p>{product.price}$</p>
-                            </div>
-                            <div className="card-buttons">
-                                <button>Add to cart</button>
-                            </div>
+                    <div className="product-card">
+                        <div className="card-image">
+                            <img src={process.env.PUBLIC_URL + `/assets/${product.pictureName}`} alt={product.name} />
                         </div>
-                    </Link>
+                        <div className="card-content">
+                            <h1>{product.name}</h1>
+                            <p>{product.price}$</p>
+                        </div>
+                        <div className="card-buttons">
+                            <button>Add to cart</button>
+                            <button id="rose"><Link to={`/product/${product.id}`}>View details</Link></button>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>

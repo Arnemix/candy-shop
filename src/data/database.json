@@ -47,7 +47,7 @@
         },
         {
             "id": 6,
-            "name": "Lays Bolognese Flavour",
+            "name": "Lays Bolognese",
             "description": "Savory potato chips with the rich and hearty taste of Bolognese sauce. Dive into a world of bold and savory flavors, as each chip captures the essence of an Italian culinary classic, making snack time a culinary adventure.",
             "quantity": 10,
             "price": 2,
@@ -65,7 +65,7 @@
         },
         {
             "id": 8,
-            "name": "Lays Spicy Paprika Flavoured",
+            "name": "Lays Spicy Paprika",
             "description": "Bold and spicy potato chips featuring the intense flavor of paprika. Ignite your taste buds with a thrilling combination of heat and spice, making Lays Spicy Paprika Flavoured a must-have for those who crave an adventurous snacking experience.",
             "quantity": 10,
             "price": 2,
