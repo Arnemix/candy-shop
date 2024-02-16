@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./NavBar.scss";
+import React, { useState } from "react";
 import { FaCandyCane } from "react-icons/fa";
+import { GiChipsBag, GiChocolateBar } from "react-icons/gi";
 import { IoIceCream } from "react-icons/io5";
-import { GiChocolateBar } from "react-icons/gi";
-import { GiChipsBag } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import SignInModal from "../../components/SignIn/SIgnIn";
-import SignUpModal from "../../components/SignUp/SignUp";
+import "./NavBar.scss";
 
 function NavBar(props) {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState("Guest");
     const [showSignInModal, setShowSignInModal] = useState(false);
-    const [showSignUpModal, setShowSignUpModal] = useState(false);
 
     const fctSignIn = () => {
         setShowSignInModal(true);
-    };
-
-    const fctSignUp = () => {
-        setShowSignUpModal(true);
     };
 
     return (
@@ -55,7 +48,7 @@ function NavBar(props) {
             </div>
             <div className="buttonGroup">
                 <div id="userMarge">
-                    <p>User : {user ? user.firstname : ''}</p>
+                    <p>User : {user ? user.firstname : ""}</p>
                 </div>
                 {!user && (
                     <>
