@@ -58,12 +58,15 @@ function NavBar(props) {
             </nav>
             <div className="search">
                 <input type="text" placeholder="dragibus, candy ..." />
-                <div className="buttonGroup">
-                    <button onClick={fctSignIn}>Sign in</button>
-                    {showSignInModal && <SignInModal onClose={() => setShowSignInModal(false)} />}
-                    <button onClick={fctSignUp}>Sign up</button>
-                    {showSignUpModal && <SignUpModal onClose={() => setShowSignUpModal(false)} />}
+            </div>
+            <div className="buttonGroup">
+                <div>
+                    <p>User : {}</p>
                 </div>
+                <button onClick={fctSignIn}>Sign in</button>
+                {showSignInModal && <SignInModal onClose={() => setShowSignInModal(false)} />}
+                <button onClick={fctSignUp}>Sign up</button>
+                {showSignUpModal && <SignUpModal onClose={() => setShowSignUpModal(false)} />}
             </div>
         </div>
     );

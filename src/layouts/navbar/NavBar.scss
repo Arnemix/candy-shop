@@ -6,6 +6,7 @@
     background-color: rgb(205, 205, 205);
     font-size: large;
     font-weight: bold;
+    padding-bottom: 1%;
 
     a {
         height: 100%;
@@ -45,25 +46,23 @@
             border-radius: 10px;
             font-size: medium;
             font-weight: bold;
-            padding-left: 10px;
         }
+    }
+    button {
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
 
-        button {
-            background-color: #ff69b4;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            margin-right: 10px;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #ff1493;
-            }
+        &:hover {
+            background-color: #ff1493;
         }
     }
 
@@ -82,16 +81,14 @@
         }
 
         .search {
-            margin-left: 15%;
-            width: 100%;
+            width: 75%;
             margin-top: 1rem;
 
             input {
-                width: 80%;
+                width: 100%;
             }
         }
         .buttonGroup {
-            margin-left: 30%;
         }
     }
     @media (max-width: 425px) {
@@ -102,17 +99,18 @@
             }
         }
         .buttonGroup {
-            margin-left: 20%;
         }
     }
 
     @media (max-width: 375px) {
         .buttonGroup {
-            margin-left: 15%;
         }
-        @media (max-width: 320px) {
+        @media (max-width: 768px) {
             .buttonGroup {
-                margin-left: 12%;
+            }
+            @media (max-width: 320px) {
+                .buttonGroup {
+                }
             }
         }
     }
