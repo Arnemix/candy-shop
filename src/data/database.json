@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Haribo Dragibus",
+            "description": "Colorful and fruity chewy candies that bring a burst of joy with every bite. Perfect for sharing and spreading happiness at gatherings or indulging in a sweet moment alone.",
             "quantity": 15,
             "price": 2,
             "pictureName": "candy1.png",
@@ -11,6 +12,7 @@
         {
             "id": 2,
             "name": "Haribo Rotella",
+            "description": "Delicious spiral-shaped gummy candies offering a delightful mix of flavors. The perfect treat for those who appreciate the playful side of confectionery, each bite is a whirlwind of fruity goodness.",
             "quantity": 20,
             "price": 2,
             "pictureName": "candy2.png",
@@ -19,6 +21,7 @@
         {
             "id": 3,
             "name": "Haribo Miami P!K",
+            "description": "Sweet and tangy chewy candies inspired by the vibrant spirit of Miami. Unwrap a taste of sunshine and let the lively flavors transport you to a tropical paradise, making each moment a celebration.",
             "quantity": 10,
             "price": 2,
             "pictureName": "candy3.png",
@@ -27,6 +30,7 @@
         {
             "id": 4,
             "name": "Haribo Tagada P!K",
+            "description": "Classic strawberry-flavored candies with a playful twist for an extra pop. Indulge in the timeless joy of Tagada P!K, where the sweet and juicy strawberry taste takes center stage, creating a treat that's hard to resist.",
             "quantity": 10,
             "price": 2,
             "pictureName": "candy4.png",
@@ -35,6 +39,7 @@
         {
             "id": 5,
             "name": "Crocky Bicky",
+            "description": "Crunchy and savory biscuits perfect for snacking anytime, anywhere. Elevate your snacking experience with Crocky Bicky, the ideal companion for those who appreciate a satisfying crunch with every bite.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chips1.png",
@@ -43,6 +48,7 @@
         {
             "id": 6,
             "name": "Lays Bolognese Flavour",
+            "description": "Savory potato chips with the rich and hearty taste of Bolognese sauce. Dive into a world of bold and savory flavors, as each chip captures the essence of an Italian culinary classic, making snack time a culinary adventure.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chips2.png",
@@ -51,6 +57,7 @@
         {
             "id": 7,
             "name": "Lays Nature",
+            "description": "Classic potato chips with a simple and natural flavor for a timeless snack. Experience the pure and uncomplicated pleasure of Lays Nature, crafted for those who savor the authentic taste of perfectly crispy and thinly sliced potatoes.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chips3.png",
@@ -59,6 +66,7 @@
         {
             "id": 8,
             "name": "Lays Spicy Paprika Flavoured",
+            "description": "Bold and spicy potato chips featuring the intense flavor of paprika. Ignite your taste buds with a thrilling combination of heat and spice, making Lays Spicy Paprika Flavoured a must-have for those who crave an adventurous snacking experience.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chips4.png",
@@ -67,6 +75,7 @@
         {
             "id": 9,
             "name": "Mars",
+            "description": "Classic milk chocolate bar with a soft nougat and caramel center. Satisfy your sweet cravings with the timeless allure of Mars, where the velvety chocolate, creamy nougat, and luscious caramel unite to create an irresistible indulgence.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate1.png",
@@ -75,6 +84,7 @@
         {
             "id": 10,
             "name": "Snickers",
+            "description": "Satisfying combination of peanuts, caramel, nougat, and milk chocolate. Unleash your hunger-crushing delight with Snickers, the ultimate blend of crunchy nuts, chewy caramel, and smooth chocolate that keeps you coming back for more.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate2.png",
@@ -83,6 +93,7 @@
         {
             "id": 11,
             "name": "Twix",
+            "description": "Crunchy biscuit bars with a layer of caramel, topped with milk chocolate. Revel in the perfect harmony of crispy biscuits, golden caramel, and silky chocolate coating, making Twix a tempting treat for those who appreciate layers of flavor.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate3.png",
@@ -91,6 +102,7 @@
         {
             "id": 12,
             "name": "Kinder Bueno White",
+            "description": "White chocolate covered wafer with a creamy hazelnut filling for a delightful treat. Experience the luxurious fusion of smooth white chocolate and indulgent hazelnut cream, making Kinder Bueno White a sophisticated delight for those with refined tastes.",
             "quantity": 10,
             "price": 2,
             "pictureName": "chocolate4.png",
@@ -99,6 +111,7 @@
         {
             "id": 13,
             "name": "Magnum Almond",
+            "description": "Indulgent almond-flavored ice cream covered in a thick layer of chocolate. Treat yourself to the exquisite pleasure of Magnum Almond, where velvety ice cream meets the rich crunch of almonds, all enveloped in a luxurious coating of chocolate.",
             "quantity": 10,
             "price": 2,
             "pictureName": "ice_cream1.png",
@@ -107,6 +120,7 @@
         {
             "id": 14,
             "name": "Calippo Cola",
+            "description": "Refreshing cola-flavored frozen treat in a convenient and fun push-up form. Beat the heat with the invigorating taste of Calippo Cola, designed for those who crave a cool and fizzy delight that's as fun to eat as it is refreshing.",
             "quantity": 10,
             "price": 1,
             "pictureName": "ice_cream2.png",
@@ -115,6 +129,7 @@
         {
             "id": 15,
             "name": "Cornetto Chocolate",
+            "description": "Classic chocolate-topped ice cream cone with a delicious surprise at the bottom. Embark on a delightful journey with Cornetto Chocolate, where every lick reveals a sweet surprise, making it the perfect treat for those who enjoy a bit of whimsy in their desserts.",
             "quantity": 10,
             "price": 1,
             "pictureName": "ice_cream3.png",
@@ -123,6 +138,7 @@
         {
             "id": 16,
             "name": "Magnum Classic",
+            "description": "Timeless and rich vanilla-flavored ice cream covered in a thick layer of chocolate. Experience the classic indulgence of Magnum Classic, where velvety vanilla ice cream meets the sumptuous embrace of chocolate, creating a treat that stands the test of time.",
             "quantity": 10,
             "price": 1,
             "pictureName": "ice_cream4.png",
