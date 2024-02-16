@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import ProductsContainer from "./components/ProductsContainer/ProductsContainer";
 import ProductDetails from "./components/ProductsDetails/ProductsDetails";
 import Cart from "./pages/cart/Cart";
+import CartIcon from '../src/components/CartIcon/CartIcon'
 
 const AppLayout = () => {
     return (
@@ -12,6 +13,7 @@ const AppLayout = () => {
             {/* //Ajouter un layout ici (navbar etc.) */}
             <NavBar />
             <Outlet />
+            <CartIcon />
         </div>
     );
 };

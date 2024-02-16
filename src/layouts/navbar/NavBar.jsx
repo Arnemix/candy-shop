@@ -10,18 +10,14 @@ import SignInModal from "../../components/SignIn/SIgnIn";
 import SignUpModal from "../../components/SignUp/SignUp";
 
 function NavBar(props) {
-    const products = useSelector((state) => state.productsReducers);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [showSignInModal, setShowSignInModal] = useState(false);
-    const [showSignUpModal, setShowSignUpModal] = useState(false);
+    const product = useSelector((state) => state.productsReducers);
 
     useEffect(() => {
-        // console.log(products);
-    }, [products]);
+        // console.log(product);
+    }, [product]);
 
-    const handleSearchChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
+    const [showSignInModal, setShowSignInModal] = useState(false);
+    const [showSignUpModal, setShowSignUpModal] = useState(false);
 
     const fctSignIn = () => {
         setShowSignInModal(true);
@@ -61,7 +57,7 @@ function NavBar(props) {
                 </ul>
             </nav>
             <div className="search">
-                <input type="text" placeholder="dragibus, candy ..." onChange={handleSearchChange} />
+                <input type="text" placeholder="dragibus, candy ..." />
             </div>
             <div className="buttonGroup">
                 <div>

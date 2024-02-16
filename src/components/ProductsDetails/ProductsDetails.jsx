@@ -16,7 +16,6 @@ function ProductDetails() {
 
     const addToCart = () => {
         dispatch(addItemToCart(product));
-        navigate("/cart");
     };
 
     return (
@@ -33,7 +32,7 @@ function ProductDetails() {
                 <p className="product-description">{product.description}</p>
                 <div className="product-price-cart">
                     <button onClick={addToCart} className="add-to-cart">
-                        Ajouter au panier
+                        Add to cart
                     </button>
                 </div>
             </div>
