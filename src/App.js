@@ -3,6 +3,7 @@ import "./App.scss";
 import NavBar from "./layouts/navbar/NavBar";
 import Home from "./pages/home/Home";
 import ProductsContainer from "./components/ProductsContainer/ProductsContainer";
+import ProductDetails from "./components/ProductsDetails/ProductsDetails"; 
 
 const AppLayout = () => {
     return (
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/ice-cream",
                 element: <ProductsContainer productsCategory="ice_cream" />,
+            },
+            {
+                path: "/product/:id",
+                element: <ProductDetails />,
             },
         ],
     },
