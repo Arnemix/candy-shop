@@ -45,3 +45,26 @@
     max-height: 100px;
     object-fit: contain;
 }
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    button {
+        width: 50%;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: #ff69b4;
+        color: white;
+        &:hover {
+            background-color: #ff4f9e;
+        }
+    }
+    button:active {
+        background-color: #ffffff83;
+        transform: scale(0.9);
+    }
+}

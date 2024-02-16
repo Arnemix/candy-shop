@@ -45,6 +45,14 @@ function Cart(props) {
                         </div>
                     </div>
                 ))}
+                {cart.length > 0 ? (
+                    <div className="cart-summary">
+                        <h2>Total : ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}</h2>
+                        <button>Purschase</button>
+                    </div>
+                ) : (
+                    <p style={{ textAlign: "center", marginTop: "25%" }}>Add something before purschasing</p>
+                )}
             </div>
         </div>
     );
