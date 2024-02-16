@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./ProductsContainer.scss";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { addItemToCart } from "../../redux/slices/cartSlices";
 
 function ProductCard({ productsCategory }) {
     const [category, setCategory] = useState(productsCategory);
@@ -10,6 +11,11 @@ function ProductCard({ productsCategory }) {
     const [data, setdata] = useState(useSelector((state) => state.productsReducers.products));
     const [products, setProducts] = useState([]);
     let params = useParams();
+    const dispatch = useDispatch();
+
+    const addToCart = (product) => {
+        dispatch(addItemToCart(product));
+    };
 
     useEffect(() => {
         setProducts([]);
@@ -19,14 +25,18 @@ function ProductCard({ productsCategory }) {
                 setProducts((prevProducts) => [...prevProducts, product]);
             }
         });
+        setCategory(productsCategory);
+
+
+
         setLoading(false);
     }, [params]);
 
     if (loading) return <p>Loading...</p>;
- return (
+    return (
         <div className="products-container">
             <div className="container-title">
-                <h1>Our {category}</h1>
+                <h1>Our {category.replace("ice_cream","ice cream")}</h1>
             </div>
             <div className="products">
                 {products.map((product) => (
@@ -39,8 +49,8 @@ function ProductCard({ productsCategory }) {
                             <p>{product.price}$</p>
                         </div>
                         <div className="card-buttons">
-                            <button>Add to cart</button>
-                            <button id="rose"><Link to={`/product/${product.id}`}>View details</Link></button>
+                            <button onClick={() => addToCart(product)}>Add to cart</button>
+                            <Link to={`/product/${product.id}`}><button id="rose">View details</button></Link>
                         </div>
                     </div>
                 ))}
